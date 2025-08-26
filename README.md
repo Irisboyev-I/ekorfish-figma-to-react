@@ -1,69 +1,106 @@
-# React + TypeScript + Vite
+# ekorfish-frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Responsive website for [ekorfish.com](https://ekorfish.com), built with **React + Vite + TypeScript + Tailwind CSS**.  
+Design comes from Figma, implemented as a modern, fast and scalable frontend project.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
+- ⚛️ React 18  
+- ⚡ Vite  
+- 🟦 TypeScript  
+- 🎨 Tailwind CSS  
+- 📦 PostCSS + Autoprefixer  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Installation & Setup
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Clone the repository:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+```bash
+git clone https://github.com/your-username/ekorfish-frontend.git
+cd ekorfish-frontend
+Install dependencies:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+bash
+Copy
+Edit
+npm install
+Run the development server:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+bash
+Copy
+Edit
+npm run dev
+Build for production:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+bash
+Copy
+Edit
+npm run build
+Preview the production build:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+bash
+Copy
+Edit
+npm run preview
+🛠 Project Structure
+bash
+Copy
+Edit
+src/
+├── app/
+├── assets/
+├── constants/
+├── features/
+├── hooks/
+├── i18n/
+├── lib/
+├── locale/
+├── pages/
+├── routes/
+├── services/
+├── styles/
+├── types/
+├── App.tsx         # main app component
+├── main.tsx        # entry point
+└── index.css       # TailwindCSS styles
+🎨 Tailwind Setup
+Tailwind is already configured.
+Main directives are inside src/index.css:
+
+css
+Copy
+Edit
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+Configuration file: tailwind.config.js
+
+js
+Copy
+Edit
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: { extend: {} },
+  plugins: [],
+}
+🌐 Deployment
+You can easily deploy this project to:
+
+Vercel
+
+Netlify
+
+GitHub Pages
+
+Cloudflare Pages
+
+Example (Vercel):
+
+bash
+Copy
+Edit
+npm run build
+Then deploy dist/ folder.
