@@ -10,7 +10,6 @@ Design comes from Figma, implemented as a modern, fast and scalable frontend pro
 - ⚡ Vite  
 - 🟦 TypeScript  
 - 🎨 Tailwind CSS  
-- 📦 PostCSS + Autoprefixer  
 
 ---
 
