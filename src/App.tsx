@@ -1,13 +1,11 @@
-import { Route, Routes } from 'react-router-dom'
+import Navbar from "./components/shared/Navbar/Navbar";
+import AppRoutes from "./routes";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <Routes>
-        <Route />
-      </Routes>
-    </div>
+    <>
+      <Navbar />
+      <AppRoutes />
+    </>
   )
 }
-
-export default App

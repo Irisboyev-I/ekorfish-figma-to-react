@@ -1,0 +1,28 @@
+export const translateEng = {
+  language: 'Language',
+  logoTitle: 'Food supplier for HoReCa',
+
+  delivery: 'Delivery',
+  price: 'Price',
+  production: 'Production',
+  pay: 'Pay',
+  contacts: 'Contacts',
+  abt: 'About Company',
+
+  search: 'Search',
+  call: 'Order a call',
+  catalog: 'Catalog products',
+  favorite: 'Favorites',
+  vxod: 'Sing In',
+  FirstSlide: '> 1000 types of food products wholesale',
+  SecondSlide: 'Own production for fish and seafood processing',
+  ThirdSlide: 'We specialize in fish and seafood supplies from around the world',
+  slidesSpan: 'for HoReCa, catering, and manufacturers',
+  button: 'Get the price list',
+  chatBot: 'Price chatbot for all our food products',
+  chatBotSpan: 'Get our prices in seconds without emails or calls to a manager',
+  coolLosos: 'Chilled salmon',
+  sale: 'Special price 1700 ₽ / kg',
+  fastDelivery: 'Same-day delivery',
+  untilEleven: 'Order before 11:00',
+}
