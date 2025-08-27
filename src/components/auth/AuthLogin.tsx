@@ -40,8 +40,8 @@ function AuthLogin() {
                 </div>
                 <button onClick={handleLogin} className="mt-[40px] w-full bg-[#FFED32] rounded-[10px] text-[#203686] cursor-pointer font-semibold leading-[110%] text-[14px] py-[23px] hover:opacity-[.8]">Войти</button>
                 <button className="mt-[20px] w-full rounded-[10px] text-[#203686] cursor-pointer border-2 border-gray-300 font-semibold leading-[110%] text-[14px] py-[23px] hover:opacity-[.8]" >Купить без регистрации</button>
+                <button className="border-none bg-transparent mt-5 cursor-pointer group" onClick={() => dispatch(setAuthTabs('register'))}>Have no account? <span className="group-hover:text-[green]">Register</span></button>
             </form>
-            <button className="absolute bottom-[20px] px-[10px] py-[15px] bg-gray-200 border-2 border-gray-300 rounded-xl cursor-pointer hover:bg-gray-300" onClick={() => dispatch(setAuthTabs('register'))}>Register</button>
         </div>
     )
 }

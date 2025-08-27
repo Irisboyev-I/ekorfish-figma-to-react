@@ -33,15 +33,17 @@ export const menuLink: IMenuList[] = [
     },
 ]
 
-export const langList: Languages[] = [
+export const langList = [
     {
         id: 1,
-        lang: Lang.ru,
+        lang: "Русский",
         flag: "https://flagcdn.com/w320/ru.png",
+        code: "ru", 
     },
     {
         id: 2,
-        lang: Lang.en,
+        lang: "English",
         flag: "https://flagcdn.com/w320/us.png",
+        code: "en", 
     },
-]  
+]
