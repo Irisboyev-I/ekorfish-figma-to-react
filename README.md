@@ -10,7 +10,6 @@ Design comes from Figma, implemented as a modern, fast and scalable frontend pro
 - ⚡ Vite  
 - 🟦 TypeScript  
 - 🎨 Tailwind CSS  
-- 📦 PostCSS + Autoprefixer  
 
 ---
 
@@ -38,9 +37,8 @@ Preview the production build:
 ```
 npm run preview
 🛠 Project Structure
-bash
-Copy
-Edit
+```
+```
 src/
 ├── app/
 ├── assets/
@@ -84,10 +82,18 @@ Netlify
 GitHub Pages
 
 Cloudflare Pages
-
+```
 Example (Vercel):
+<<<<<<< HEAD
 ```
 ```
 npm run build
 Then deploy dist/ folder.
 ```
+=======
+
+```
+npm run build
+Then deploy dist/ folder.
+```
+>>>>>>> 9a80cb8a65bc92d6e4a535939ace18785ad067cb

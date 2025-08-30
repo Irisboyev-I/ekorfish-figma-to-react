@@ -1,11 +1,12 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import formMeat from "../../assets/images/form-meat.png"
 import { styles } from '../../styles/styles'
 import { FaX } from 'react-icons/fa6'
 import { useDispatch } from 'react-redux'
 import { setModalStatus } from '@/featerues/headerModalSlice'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 function HeaderModal() {
   const { t } = useTranslation()
@@ -19,10 +20,18 @@ function HeaderModal() {
     register,
     handleSubmit,
     formState: { errors },
-    reset
-  } = useForm()
+    reset,
+    control,
+  } = useForm({
+    defaultValues: {
+      name: "",
+      phone: "",
+      comment: "",
+      agreement: false,
+    }
+  })
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     console.log("Form Data:", data)
     reset()
     dispatch(setModalStatus("close"))
@@ -53,22 +62,28 @@ function HeaderModal() {
                 {...register("name", { required: t('nameRequired') })}
                 className={`${styles.input} ${errors.name ? 'border-red-500' : ''}`}
               />
-              {errors.name && <p className="text-red-500 text-sm mt-[-12px] mb-[8px]">{errors.name.message}</p>}
+              {errors.name && <p className="text-red-500 text-sm mt-[-12px] mb-[8px]">{errors.name.message as string}</p>}
 
-              <input
-                type="text"
-                placeholder={t('formPhone')}
-                
-                {...register("phone", {
-                  required: t('phoneRequired'),
-                  pattern: {
-                    value: /^[0-9+\-()\s]*$/,
-                    message: t('phoneInvalid')
-                  }
-                })}
-                className={`${styles.input} ${errors.phone ? 'border-red-500' : ''}`}
+              <Controller
+                name="phone"
+                control={control}
+                rules={{ required: t('phoneRequired') }}
+                render={({ field }) => (
+                  <PhoneInput
+                    country={'uz'}
+                    value={field.value}
+                    onChange={field.onChange}
+                    onBlur={field.onBlur}
+                    inputClass={`${styles.input}`}
+                    containerClass="!w-full"
+                    buttonClass="!hidden"
+                    dropdownClass="!z-[9999]"
+                    enableSearch
+                    disableDropdown
+                  />
+                )}
               />
-              {errors.phone && <p className="text-red-500 text-sm mt-[-12px] mb-[8px]">{errors.phone.message}</p>}
+              {errors.phone && <p className="text-red-500 text-sm mt-[-12px] mb-[8px]">{errors.phone.message as string}</p>}
 
               <input
                 type="text"
@@ -84,7 +99,7 @@ function HeaderModal() {
                 />
                 {t('formAgreement')}
               </label>
-              {errors.agreement && <p className="text-red-500 text-sm mt-[4px]">{errors.agreement.message}</p>}
+              {errors.agreement && <p className="text-red-500 text-sm mt-[4px]">{errors.agreement.message as string}</p>}
 
               <button type="submit" className={`${styles.button} w-full mt-[40px]`}>
                 {t('formSend')}

@@ -5,6 +5,9 @@ import HeaderTips from "@/components/Hero-section/HeaderTips"
 
 import { useSelector } from "react-redux"
 import type { RootState } from "@/store"
+import Assortiment from "@/components/Assortiment/Assortiment"
+import Form from "@/components/FormBanner/Form"
+import HowDelivery from "@/components/HowDelivery/HowDelivery"
 
 function Home() {
   const modalStatus = useSelector((state: RootState) => state.modal.modalStatus)
@@ -15,6 +18,9 @@ function Home() {
       <HeaderBanner />
       {modalStatus === "open" && <HeaderModal />}
       <HeaderTips />
+      <Assortiment />
+      <Form />
+      <HowDelivery />
     </div>
   )
 }

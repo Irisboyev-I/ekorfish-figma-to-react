@@ -17,7 +17,7 @@ function HeaderBanner() {
   }
 
   return (
-    <div className={`${styles.container} pt-[20px]`}>
+    <header className={`${styles.container} pt-[20px]`}>
       <Swiper spaceBetween={50} slidesPerView={1}>
         <SwiperSlide className="min-h-[450px] max-h-[450px] relative bg-[#6BA252] pt-[40px] pb-[74px] px-[40px] text-white font-semibold text-[50px] leading-[100%] rounded-[20px] overflow-hidden">
           <div className="absolute inset-0 z-0"><img src={bgUzor} alt="фон узор" className="w-full h-full object-cover" /></div>
@@ -44,7 +44,7 @@ function HeaderBanner() {
           </div>
         </SwiperSlide>
       </Swiper>
-    </div>
+    </header>
   )
 }
 

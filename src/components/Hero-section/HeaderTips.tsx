@@ -1,4 +1,3 @@
-import React from 'react'
 import phone from "../../assets/images/phone.png"
 import losos from "../../assets/images/losos.jpg"
 import car from "../../assets/images/car.jpg"
@@ -18,7 +17,7 @@ function HeaderTips() {
                     <span className="font-medium text-[14px] leading-[130%] block mb-4">{t('chatBotSpan')}</span>
                 </div>
                 <div className="flex justify-between items-end mt-auto">
-                    <button className="bg-[#4ADD47] rounded-[10px] text-white py-[7px] px-[15px] flex items-center gap-[4.5px]">
+                    <button className="cursor-pointer bg-[#4ADD47] rounded-[10px] text-white py-[7px] px-[15px] flex items-center gap-[4.5px]">
                         <FaWhatsapp /> WhatsApp
                     </button>
                     <img src={phone} alt="phone" className="max-h-[90px] object-contain" />
